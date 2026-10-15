@@ -2,7 +2,15 @@
 
 Aplikasi **LocPuskesmas** adalah aplikasi pencari lokasi Pusat Kesehatan Masyarakat (Puskesmas) khusus di Kota Depok, Jawa Barat. Aplikasi ini dibangun untuk mendemonstrasikan implementasi praktik terbaik modern Android (Modern Android Development / MAD).
 
-Aplikasi terhubung dengan endpoint JSON *dummy/real* di GitHub Gist dan mampu berjalan *offline* berkat arsitektur data caching dengan **Room Database**. Desain antarmuka merujuk pada standar *Google Stitch Material 3 (Emerald Medical Theme)*.
+Aplikasi terhubung dengan endpoint JSON di GitHub Gist dan mampu berjalan *offline* berkat arsitektur data caching dengan **Room Database**. Desain antarmuka merujuk pada standar *Google Stitch Material 3 (Emerald Medical Theme)*.
+
+## 📸 Tangkapan Layar (Screenshots)
+
+<p align="center">
+  <img src="docs/screenshots/map_view.png" width="320" alt="Peta Utama LocPuskesmas" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="docs/screenshots/detail_bottom_sheet.png" width="320" alt="Detail Modal Bottom Sheet Puskesmas" />
+</p>
 
 ## 📱 Fitur Utama
 1. **Interactive Google Maps**: Menggunakan `maps-compose` untuk performa peta deklaratif di atas Jetpack Compose.
@@ -32,12 +40,10 @@ Kode di dalam repositori ini dirancang khusus dengan tambahan komentar edukasion
 
 ## 📦 Setup & Instalasi
 1. Clone repositori ini.
-2. Buka project di **Android Studio Iguana/Jellyfish/Koala** atau versi terbaru.
-3. (PENTING) Tambahkan **Google Maps API Key** di file `AndroidManifest.xml` (atau di `local.properties`).
-   ```xml
-   <meta-data
-       android:name="com.google.android.geo.API_KEY"
-       android:value="MASUKKAN_API_KEY_ANDA_DI_SINI" />
+2. Buka project di **Android Studio**.
+3. Tambahkan file `secrets.properties` di root folder dan isi dengan Google Maps API Key Anda:
+   ```properties
+   MAPS_API_KEY=AIzaSy_MASUKKAN_KEY_ANDA_DISINI
    ```
 4. Build dan Run di Emulator atau Physical Device.
 
@@ -48,6 +54,5 @@ Tema warna **Emerald Medical**:
 - Surface/Background: `#FBFDF9`
 
 ## 👨‍💻 Kontributor / Penulis
-Dibuat menggunakan asisten AI berbasis Gemini Model dan praktik terbaik *Senior Android Engineering*.
 - **Package**: `com.rizqinh.locpuskesmas`
-- **Domain API**: Gist Github 
+- **Domain API**: Gist GitHub
